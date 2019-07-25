@@ -11,4 +11,4 @@ addons:
 sonarcloud:
   organization: mohanapriya
   token:
-    secure: 40b88f9e151489c63029161c7ccbaa042c82e94a
+    secure: travis encrypt 40b88f9e151489c63029161c7ccbaa042c82e94a
