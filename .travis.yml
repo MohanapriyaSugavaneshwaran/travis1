@@ -9,6 +9,6 @@ after_success:
 - bash <(curl -s https://codecov.io/bash)
 addons:
 sonarcloud:
-  organization: mohanapriya
+  organization: MohanapriyaSugavaneshwaran
   token:
-    secure: travis encrypt 40b88f9e151489c63029161c7ccbaa042c82e94a
+    secure: 19271ba509557cb21524909b4f32f867d17441c0
