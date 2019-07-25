@@ -29,6 +29,7 @@ public class StudentController {
     public  @ResponseBody ResponseEntity<List<Student>> show() {
         return new ResponseEntity<>(studentService.getall(), HttpStatus.OK);
     }
+    
     @DeleteMapping(value="/{id}", headers ="Accept=application/json")
     public ResponseEntity<Student> deleteStudent(@PathVariable("id") int id){
         Student student = studentService.findStudentByid(id);
