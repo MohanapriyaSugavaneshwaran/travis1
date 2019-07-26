@@ -12,3 +12,7 @@ sonarcloud:
   organization: MohanapriyaSugavaneshwaran
   token:
     secure: f9b86fd2bced4d9c9244377d7aaed27b7123af37
+deploy:
+provider: heroku
+api_key: cae731da-6123-4e73-a583-374d1ae3b8ad
+app: travis1
