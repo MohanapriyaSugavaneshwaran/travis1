@@ -2,8 +2,7 @@ language: java
 sudo: false # faster builds
 before_install:
 - chmod +x mvnw
-script:
-- "./mvnw clean install -B"
+after_success:
 - bash <(curl -s https://codecov.io/bash)
 deploy:
 provider: heroku
