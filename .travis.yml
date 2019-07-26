@@ -4,7 +4,3 @@ before_install:
 - chmod +x mvnw
 after_success:
 - bash <(curl -s https://codecov.io/bash)
-deploy:
-provider: heroku
-api_key: cae731da-6123-4e73-a583-374d1ae3b8ad
-app: travis1
