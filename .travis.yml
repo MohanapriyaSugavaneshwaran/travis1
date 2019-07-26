@@ -11,4 +11,4 @@ addons:
 sonarcloud:
   organization: MohanapriyaSugavaneshwaran
   token:
-    secure: 19271ba509557cb21524909b4f32f867d17441c0
+    secure: f9b86fd2bced4d9c9244377d7aaed27b7123af37
