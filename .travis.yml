@@ -10,6 +10,6 @@ api_key: cae731da-6123-4e73-a583-374d1ae3b8ad
 app: travis1
 addons:
 sonarcloud:
-  organization: mohanapriya
+  organization: mohanapriyasugavaneshwaran
   token:
     secure: 6b36f216945887c5585ad8e36ff225e37dd76757
