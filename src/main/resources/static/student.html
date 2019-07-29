@@ -4,9 +4,26 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="student.js"></script>
     </head>
-    <body onload=app.fetchall()>
-            student
-    </body>
+    <body onload="app.fetchall()">
+        student
+        <hr>
+        <form action="javascript:void(0);" method="POST" onsubmit="app.saveorupdate()">
+        <label>id:</label>
+        <input type="text" name="id" id="id"> <br>
+        <label>name: </label>
+        <input type="text" name="name" id="name"><br>
+        <button id="btn">Add</button>
+        </form>
+        <hr>
+        <table>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Actions</th>
+        <tbody id="student"> 
+        </tbody>
+       </table>
+       </body>
 </html>
