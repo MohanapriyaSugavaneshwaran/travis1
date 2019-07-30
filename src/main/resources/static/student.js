@@ -1,6 +1,6 @@
 var app=new function(){
     var student=[];
-    var mod="";
+    var mode="";
     this.fetchall=function(){
         var xhttp = new XMLHttpRequest();
  xhttp.onreadystatechange = function () {
@@ -10,7 +10,7 @@ var app=new function(){
  app.printtable();
  }
  };
- xhttp.open("GET", "https://travis1.herokuapp.com/student/", true);
+ xhttp.open("GET", "http://localhost:8080/student/", true);
  xhttp.send();
  };
  this.printtable = function () {
@@ -48,9 +48,9 @@ var app=new function(){
                 if (mode == "") {
                 alert("save called");
                 // {"id": 0, "name": "TeamIndia"}
-                var newStudent = {"id": 0, "name": name};
-                alert(newStudent);
-                var url = "https://travis1.herokuapp.com/student/";
+                var newstudent = {"id": 0, "name": name};
+                alert(newstudent);
+                var url = "http://localhost:8080/student/";
                 var xhr = new XMLHttpRequest();
                 xhr.onload = function () {
                 if (xhr.readyState == 4 && xhr.status == "200") {
@@ -59,15 +59,15 @@ var app=new function(){
                 }
                 xhr.open("POST", url , true);
                 xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-                xhr.send(JSON.stringify(newStudent));
+                xhr.send(JSON.stringify(newstudent));
                 app.FetchAll();
                 }
                 else {
                 alert("update called");
                 // alert("id" + id + "name " + name);
-                var updateStudent = {"id": 0, "name": name};
-                alert(updateStudent);
-                var url = "https://travis1.herokuapp.com/student/";
+                var updatestudent = {"id": 0, "name": name};
+                alert(updatestudent);
+                var url = "http://localhost:8080/student/";
                 var xhr = new XMLHttpRequest();
                 xhr.onload = function () {
                 if (xhr.readyState == 4 && xhr.status == "200") {
@@ -76,7 +76,7 @@ var app=new function(){
                 }
                 xhr.open("PUT", url, true);
                 xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-                xhr.send(JSON.stringify(updateStudent));
+                xhr.send(JSON.stringify(updatestudent));
                 document.getElementById('btn').innerHTML = "Add";
                 mode = "";
                 app.FetchAll();
@@ -85,6 +85,5 @@ var app=new function(){
                 document.getElementById('id').value = "";
                 document.getElementById('name').value = "";
                 };
-               
 
     };
